@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cb85568-8235-43ab-9b3e-a3796a076637" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/private/1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SUMMARY.md" beforeDir="false" afterPath="$PROJECT_DIR$/SUMMARY.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-highlight/ebook.css" beforeDir="false" afterPath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-highlight/ebook.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/gitbook/gitbook-plugin-livereload/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/person-Notebook/logs/2月.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_book/search_index.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hh/1.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +47,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/other-Notebook" />
+    </key>
+  </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
@@ -62,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1581385541572</updated>
       <workItem from="1581385542993" duration="734000" />
-      <workItem from="1581586748683" duration="4010000" />
+      <workItem from="1581586748683" duration="4967000" />
     </task>
     <servers />
   </component>
@@ -70,9 +83,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="818" y="338" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581749963498">
+    <state x="818" y="338" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581753563913">
       <screen x="0" y="23" width="1440" height="798" />
     </state>
-    <state x="818" y="338" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.798@0.23.1440.798" timestamp="1581749963498" />
+    <state x="818" y="338" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.798@0.23.1440.798" timestamp="1581753563913" />
   </component>
 </project>
