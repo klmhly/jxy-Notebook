@@ -1,0 +1,777 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>构造二叉树 · 前端学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="玉小鹅">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="回溯法.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://jiaxiaoyu.cn" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    个人记录
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    打卡记录
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../person-Notebook/logs/2月.html">
+            
+                <a href="../../person-Notebook/logs/2月.html">
+            
+                    
+                    2020-02
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Leetcode 手册
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../person-Notebook/logs/2月.html">
+            
+                <a href="../../person-Notebook/logs/2月.html">
+            
+                    
+                    日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    题解笔记
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.2.1" data-path="构造二叉树.html">
+            
+                <a href="构造二叉树.html">
+            
+                    
+                    构造二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="回溯法.html">
+            
+                <a href="回溯法.html">
+            
+                    
+                    回溯法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    做题记录
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../做题记录/有序链表转换二叉搜索树.html">
+            
+                <a href="../做题记录/有序链表转换二叉搜索树.html">
+            
+                    
+                    有序链表转换二叉搜索树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../做题记录/将有序数组转换为二叉搜索树.html">
+            
+                <a href="../做题记录/将有序数组转换为二叉搜索树.html">
+            
+                    
+                    将有序数组转换为二叉搜索树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../做题记录/从中序与后序遍历序列构造二叉树.html">
+            
+                <a href="../做题记录/从中序与后序遍历序列构造二叉树.html">
+            
+                    
+                    有序链表转换二叉搜索树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../做题记录/从前序与中序遍历序列构造二叉树.html">
+            
+                <a href="../做题记录/从前序与中序遍历序列构造二叉树.html">
+            
+                    
+                    将有序数组转换为二叉搜索树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="../做题记录/017-电话号码的字母组合.html">
+            
+                <a href="../做题记录/017-电话号码的字母组合.html">
+            
+                    
+                    017-电话号码的字母组合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.6" data-path="../做题记录/022-括号生成.html">
+            
+                <a href="../做题记录/022-括号生成.html">
+            
+                    
+                    022-括号生成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.7" data-path="../做题记录/077-组合.html">
+            
+                <a href="../做题记录/077-组合.html">
+            
+                    
+                    077-组合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.8" data-path="../做题记录/039-组合总和.html">
+            
+                <a href="../做题记录/039-组合总和.html">
+            
+                    
+                    039-组合总和
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.9" data-path="../做题记录/040-组合总和2.html">
+            
+                <a href="../做题记录/040-组合总和2.html">
+            
+                    
+                    040-组合总和2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.10" data-path="../做题记录/046-全排列.html">
+            
+                <a href="../做题记录/046-全排列.html">
+            
+                    
+                    046-全排列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.11" data-path="../做题记录/047-全排列2.html">
+            
+                <a href="../做题记录/047-全排列2.html">
+            
+                    
+                    047-全排列2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.12" data-path="../做题记录/078-子集.html">
+            
+                <a href="../做题记录/078-子集.html">
+            
+                    
+                    078-子集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.13" data-path="../做题记录/090-子集2.html">
+            
+                <a href="../做题记录/090-子集2.html">
+            
+                    
+                    090-子集2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    新技术
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    配置手册
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../Server-Notebook/阿里云部署网站.html">
+            
+                <a href="../../Server-Notebook/阿里云部署网站.html">
+            
+                    
+                    阿里云部署网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../Server-Notebook/Git操作.html">
+            
+                <a href="../../Server-Notebook/Git操作.html">
+            
+                    
+                    Git操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    其他
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../other-Notebook/正则表达式.html">
+            
+                <a href="../../other-Notebook/正则表达式.html">
+            
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    ga 统计
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >构造二叉树</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x200B;                &#x76EE;&#x5F55;</p>
+<p>[TOC]</p>
+<h4 id="&#x89E3;&#x9898;&#x4E2D;&#x5FC3;&#x601D;&#x60F3;">&#x89E3;&#x9898;&#x4E2D;&#x5FC3;&#x601D;&#x60F3;</h4>
+<ol>
+<li><p>&#x786E;&#x5B9A;&#x51FA;&#x6839;&#x8282;&#x70B9;&#xFF0C;</p>
+</li>
+<li><p>&#x7136;&#x540E;&#x518D;&#x9012;&#x5F52;&#x7684;&#x4E3A;&#x6839;&#x8282;&#x70B9;&#x8D4B;&#x503C;&#x5DE6;&#x53F3;&#x5B69;&#x5B50;&#x7684;&#x8FC7;&#x7A0B;&#x3002;</p>
+</li>
+</ol>
+<h4 id="&#x89E3;&#x9898;&#x4E2D;&#x5FC3;&#x601D;&#x60F3;">&#x89E3;&#x9898;&#x4E2D;&#x5FC3;&#x601D;&#x60F3;</h4>
+<ol>
+<li><p>&#x5148;&#x5E8F; + &#x4E2D;&#x5E8F; &#x7684;&#x904D;&#x5386;&#x6570;&#x7EC4;</p>
+</li>
+<li><p>&#x4E2D;&#x5E8F; + &#x540E;&#x5E8F; &#x7684;&#x904D;&#x5386;&#x6570;&#x7EC4;</p>
+</li>
+<li><p>&#x4E00;&#x4E2A;&#x6709;&#x5E8F;&#x6570;&#x7EC4; &#xFF08;&#x6784;&#x9020;&#x7ED3;&#x679C;&#x4E0D;&#x552F;&#x4E00;&#xFF0C;&#x6784;&#x9020;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#xFF09;</p>
+</li>
+<li><p>&#x4E00;&#x4E2A;&#x6709;&#x5E8F;&#x94FE;&#x8868;&#xFF08;&#x6784;&#x9020;&#x7ED3;&#x679C;&#x4E0D;&#x552F;&#x4E00;&#xFF0C;&#x6784;&#x9020;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#xFF0C; &#x6BD4;3&#x591A;&#x4E86;&#x4E00;&#x6B65;&#xFF1A;&#x904D;&#x5386;&#x94FE;&#x8868;&#xFF0C;&#x4FDD;&#x5B58;&#x4E3A;&#x6709;&#x5E8F;&#x6570;&#x7EC4;&#xFF09;</p>
+</li>
+</ol>
+<h4 id="&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;">&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;</h4>
+<p>&#x200B;    &#x5BF9;&#x4E8E;&#x524D;&#x4E24;&#x4E2A;&#x9898;&#x76EE;&#xFF1A; &#x5148;&#x5E8F;&#x6570;&#x7EC4; &#x3001;&#x540E;&#x5E8F;&#x6570;&#x7EC4; &#x53EF;&#x4EE5;&#x786E;&#x5B9A;&#x51FA;&#x6839;&#x5143;&#x7D20;&#xFF1B;&#x7136;&#x540E;&#x5229;&#x7528;&#x4E2D;&#x5E8F;&#x5212;&#x5206;&#x5DE6;&#x53F3;&#x5B69;&#x5B50;&#x7684;&#x8303;&#x56F4;&#xFF0C;&#x9012;&#x5F52;&#x7684;&#x6784;&#x5EFA;&#x6574;&#x4E2A;&#x4E8C;&#x53C9;&#x6811;&#x3002;</p>
+<p>&#x200B;    &#x5BF9;&#x4E8E;&#x540E;&#x4E24;&#x8005;&#x9898;&#x76EE;&#xFF1A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;&#x662F;left &lt; root,  root&lt; right; &#x56E0;&#x6B64;&#x7EB3;&#x6709;&#x5E8F;&#x5217;&#x8868;&#x7684;&#x4E2D;&#x95F4;&#x5143;&#x7D20;&#x4E3A;&#x6839;&#xFF0C;&#x5212;&#x5206;&#xFF0C; &#x9012;&#x5F52;&#x7684;&#x5BFB;&#x627E;&#x6BCF;&#x4E00;&#x4E2A;&#x5DE6;&#x53F3;&#x5B69;&#x5B50;</p>
+<h4 id="&#x76F8;&#x5173;&#x9898;&#x76EE;">&#x76F8;&#x5173;&#x9898;&#x76EE;</h4>
+<ol>
+<li><p>&#x4ECE;&#x524D;&#x5E8F;&#x4E0E;&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#x5E8F;&#x5217;&#x6784;&#x9020;&#x4E8C;&#x53C9;&#x6811;</p>
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">var</span> <span class="token function-variable function">buildTree</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">preorder<span class="token punctuation">,</span> inorder</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>preorder<span class="token punctuation">.</span>length <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">null</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">let</span> root <span class="token operator">=</span> <span class="token punctuation">{</span>
+        val<span class="token operator">:</span> preorder<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>inorder<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>inorder<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">===</span> preorder<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            root<span class="token punctuation">.</span>left <span class="token operator">=</span> <span class="token function">buildTree</span><span class="token punctuation">(</span>preorder<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> inorder<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            root<span class="token punctuation">.</span>right <span class="token operator">=</span> <span class="token function">buildTree</span><span class="token punctuation">(</span>preorder<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> inorder<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> root
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ol>
+<ol>
+<li><p>&#x4ECE;&#x4E2D;&#x5E8F;&#x4E0E;&#x540E;&#x5E8F;&#x904D;&#x5386;&#x5E8F;&#x5217;&#x6784;&#x9020;&#x4E8C;&#x53C9;&#x6811;</p>
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">var</span> <span class="token function-variable function">buildTree</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">inorder<span class="token punctuation">,</span> postorder</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>postorder<span class="token punctuation">.</span>length<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token keyword">null</span>
+    <span class="token keyword">var</span> len <span class="token operator">=</span> postorder<span class="token punctuation">.</span>length
+    <span class="token keyword">var</span> rootVal <span class="token operator">=</span> postorder<span class="token punctuation">[</span>len<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+    <span class="token keyword">var</span> root<span class="token operator">=</span><span class="token punctuation">{</span>
+        val<span class="token operator">:</span>rootVal
+    <span class="token punctuation">}</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>inorder<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span>rootVal<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            root<span class="token punctuation">.</span>left <span class="token operator">=</span> <span class="token function">buildTree</span><span class="token punctuation">(</span>inorder<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span>postorder<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            root<span class="token punctuation">.</span>right <span class="token operator">=</span> <span class="token function">buildTree</span><span class="token punctuation">(</span>inorder<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>postorder<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> root
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ol>
+<ol>
+<li><p>&#x5C06;&#x6709;&#x5E8F;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</p>
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">var</span> <span class="token function-variable function">sortedArrayToBST</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">nums</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// &#x53EF;&#x4EE5;&#x8F6C;&#x5316;&#x4E3A;&#x6839;&#x636E; &#x4E2D;&#x5E8F;&#x904D;&#x5386;&#x5E8F;&#x5217; &#x751F;&#x6210;&#x4E8C;&#x53C9;&#x6811;</span>
+    <span class="token keyword">function</span> <span class="token function">helper</span><span class="token punctuation">(</span><span class="token parameter">left<span class="token punctuation">,</span> right</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>left <span class="token operator">&gt;</span> right<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">null</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">let</span> mid <span class="token operator">=</span><span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token punctuation">(</span>left <span class="token operator">+</span> right<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span>
+        <span class="token keyword">let</span> root <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TreeNode</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        root<span class="token punctuation">.</span>left <span class="token operator">=</span> <span class="token function">helper</span><span class="token punctuation">(</span>left<span class="token punctuation">,</span> mid<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+        root<span class="token punctuation">.</span>right <span class="token operator">=</span> <span class="token function">helper</span><span class="token punctuation">(</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> right<span class="token punctuation">)</span>  
+        <span class="token keyword">return</span> root
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token function">helper</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> nums<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ol>
+<ol>
+<li><p>&#x6709;&#x5E8F;&#x94FE;&#x8868;&#x8F6C;&#x6362;&#x4E8C;&#x53C9;&#x641C;&#x7D22;&#x6811;</p>
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">var</span> <span class="token function-variable function">sortedListToBST</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">head</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>head<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        res<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>head<span class="token punctuation">.</span>val<span class="token punctuation">)</span>
+        head <span class="token operator">=</span> head<span class="token punctuation">.</span>next
+    <span class="token punctuation">}</span>
+    <span class="token keyword">let</span> len <span class="token operator">=</span> res<span class="token punctuation">.</span>length
+    <span class="token keyword">function</span> <span class="token function">helper</span><span class="token punctuation">(</span><span class="token parameter">left<span class="token punctuation">,</span> right</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>left <span class="token operator">&gt;</span> right<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">null</span>
+        <span class="token punctuation">}</span> 
+        <span class="token keyword">let</span> mid <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token punctuation">(</span>left <span class="token operator">+</span> right<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span>
+        <span class="token keyword">let</span> root <span class="token operator">=</span> <span class="token punctuation">{</span>
+            val<span class="token operator">:</span> res<span class="token punctuation">[</span>mid<span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+        root<span class="token punctuation">.</span>left <span class="token operator">=</span> <span class="token function">helper</span><span class="token punctuation">(</span>left<span class="token punctuation">,</span> mid<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+        root<span class="token punctuation">.</span>right <span class="token operator">=</span> <span class="token function">helper</span><span class="token punctuation">(</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> right<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> root
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token function">helper</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> len<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ol>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="http://jiaxiaoyu.cn" target="_blank">&#x7389;&#x5C0F;&#x9E45;</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2020-02-25 15:18:55 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="回溯法.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 回溯法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"构造二叉树","level":"1.3.2.1","depth":3,"next":{"title":"回溯法","level":"1.3.2.2","depth":3,"path":"LeetCode-Notebook/题解笔记/回溯法.md","ref":"LeetCode-Notebook/题解笔记/回溯法.md","articles":[]},"previous":{"title":"题解笔记","level":"1.3.2","depth":2,"ref":"","articles":[{"title":"构造二叉树","level":"1.3.2.1","depth":3,"path":"LeetCode-Notebook/题解笔记/构造二叉树.md","ref":"LeetCode-Notebook/题解笔记/构造二叉树.md","articles":[]},{"title":"回溯法","level":"1.3.2.2","depth":3,"path":"LeetCode-Notebook/题解笔记/回溯法.md","ref":"LeetCode-Notebook/题解笔记/回溯法.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["todo","-sharing","sharing-plus","-highlight","url-embed","page-footer-ex","expandable-chapters","prism","prism-themes","livereload"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"livereload":{},"todo":{},"page-footer-ex":{"copyright":"By [玉小鹅](http://jiaxiaoyu.cn)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"bibtex-indexed-cite":{"path":"/"},"quiz":{"labels":{"check":"提交答案","showExplanation":"显示解释","showCorrect":"显示正确答案","explanationHeader":"释义"},"text":{"noChosen":"Choose at least one answer","incomplete":"Some correct answers are missing"},"buttons":{"showCorrect":true,"showExplanation":true}},"prism-themes":{},"url-embed":{},"include-codeblock":{"template":"ace","unindent":true,"edit":false},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":true,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":true,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"玉小鹅","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端学习笔记","links":{"sidebar":{"Home":"http://jiaxiaoyu.cn"}},"gitbook":"*"},"file":{"path":"LeetCode-Notebook/题解笔记/构造二叉树.md","mtime":"2020-02-25T07:18:55.729Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-25T03:48:15.750Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
