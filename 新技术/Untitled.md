@@ -1,0 +1,1 @@
+{"nickname":"xiaoyu","email":"xiaoyu.jia@za.group","password":"mCmfxznGT4odNuObuNIczFp3crQC+s33XTseZ271BEtr+I7eeZcw/owVULCi87S96M2rV/SLNHRD0arQ+D5/o5DULs8DTSlhHJ74V31/fAl6DKSNjxgyLnudvTD3atiQt79YMTVf6YaiBcESUn6B51QB9/7s09MxMzOoMYccG1E=","authCode":"013605e8-7650-4e05-96ed-003fdcafdcfe"}
