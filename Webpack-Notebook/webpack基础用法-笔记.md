@@ -211,3 +211,23 @@
 
 
 10. 文件监听
+
+    文件指纹概念： 打包后输出**文件名的后缀**
+
+    通常可以用来做版本管理
+
+    3种文件指纹：Hash, Chunkhash, Contenthash
+
+    Hash: 和整个项目的构建相关，只要项目文件有修改，整个项目构建的hash值就会更改
+
+    Chunkhash: 和webpack打包的chunk有关，不同的entry会生成不同的chunkhash值
+
+    Contenthash: 根绝文件内容来定义hash，文件内容不变，则contenthash不变
+
+    js文件指纹：
+
+    图片文件指纹：
+
+    cs s文件指纹
+
+    
